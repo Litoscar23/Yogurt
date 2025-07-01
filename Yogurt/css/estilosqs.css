@@ -1,0 +1,101 @@
+/* Primer bloque (texto y imagen) */
+#seccion1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#seccion1 article {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#seccion1 img {
+    max-width: 70%; 
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block; 
+}
+
+/* Fotos */
+.integrantes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.estudiantes {
+    text-align: center;
+    margin: 10px;
+}
+
+.estudiantes figure {
+    margin-bottom: 10px;
+}
+
+.estudiantes img {
+    width: 250px; 
+    height: 400px;
+    object-fit: cover; /* Proporción */
+    border-radius: 15px; 
+    border: 5px solid #34337a; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.estudiantes img:hover {
+    transform: scale(1.05); 
+}
+
+figcaption {
+    color: #34337a;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    #seccion1 {
+        flex-direction: column; 
+        text-align: left;
+    }
+
+    #seccion1 img {
+        max-width: 100%; 
+    }
+
+    .integrantes {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .estudiantes img {
+        width: 200px; 
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    #seccion1 {
+        padding: 0 10px; 
+    }
+
+    .integrantes {
+        margin-top: 10px;
+    }
+
+    .estudiantes img {
+        width: 150px; 
+        height: 200px;
+    }
+
+    figcaption {
+        font-size: 0.9rem; 
+    }
+}
