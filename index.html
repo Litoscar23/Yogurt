@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMP Yogurt</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora Plan Maestro de Producción de Yogurt</h1>
+    </header>
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">¿Quiénes somos?</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="Saludo">
+            <H2 id="pmp">Plan maestro de producción de yogurt</H2>
+            <h3>Bienvenido en esta web usted podrá ver lo siguiente:</h3>
+                <ul>
+                    <h3>Planificación diaria/semanal del yogurt</h3>
+                    <h3>La demanda proyectada</h3>
+                    <h3>Calendario de producción</h3>
+                    <h3>Fecha de caducidad del yogurt</h3>
+                </ul>
+        </section>
+        <section id="Entrada">
+            <h3>Pasos a realizar</h3>
+                <ul>
+                    <label>Ingrese los litros de leche que tiene:</label>
+                    <input><br>
+
+                    <label for="sabor">Sabor del yogurt:</label>
+                    <select id="sabor" name="sabor" required>
+                        <option value="Fresa">Fresa</option>
+                        <option value="Durazno">Durazno</option>
+                        <option value="Fruta3">Gampi</option>
+                    </select><br>
+                    <label>Ingrese cantidad de cultivo:</label>
+                    <input><br>
+
+                    <label>Seleccione la fecha en la cual comenzará la producción</label>
+                    <label for="fechaInicio">Fecha de inicio (DD-MM-AAAA):</label>
+                    <input type="date" id="fechaInicio" name="fechaInicio" required><br>
+
+                    <label>Presione el botón para calcular:</label>
+                        <button id="calcular"> CALCULAR </button>
+                </ul>
+        </section>
+        <section id="Salida">
+            <H1>Salida de datos</H1>
+            <label for=""></label>
+
+            <label for=""></label>
+            
+            <label for=""></label>
+        </section>
+    </main>
+    </body>
+<footer>Footer</footer>
+</html>
+<script src="js/script.js"><script/>
+
