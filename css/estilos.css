@@ -11,34 +11,48 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
+    margin: 0; /* Eliminar margen global */
+    padding: 0; /* Eliminar padding global */
+    background-image: url('ruta-de-tu-imagen.jpg'); /* Coloca la ruta de la imagen aquí */
+    background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 /* Header */
 header {
     background-color: #34337a;
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
+    margin: 0; /* Eliminar margen del header */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    position: relative; /* Asegura que no haya desplazamiento hacia los lados */
 }
 
 header h1 {
     font-size: 2.5em;
+    margin: 0; /* Eliminar margen del h1 */
 }
 
 /* nav */
 nav {
     background-color: #28297f;
-    padding: 10px 0;
+    padding: 20px; /* Eliminar padding del nav */
+    margin: 0; /* Eliminar margen del nav */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0; /* Eliminar margen de ul */
+    padding: 0; /* Eliminar padding de ul */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 15px; /* Espaciado entre los ítems */
 }
 
 nav ul li a {
@@ -57,19 +71,19 @@ nav ul li a:hover {
 section {
     margin: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-section h2, section h3 {
+section h2 {
     color: #34337a; 
 }
 
 /* Lista */
 ul {
-    list-style: none;
-    padding-left: 0;
+    list-style-type: circle; /* Cambia las viñetas a círculos */
+    padding-left: 20px; /* Añade un poco de espacio a la izquierda */
 }
 
 ul h3 {
@@ -103,62 +117,86 @@ button:hover {
 }
 
 /* Footer */
-/*Falta agregar css del footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #42214B;
+    color: white;
+    margin: 0; /* Eliminar margen del footer */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en diferentes filas cuando sea necesario */
+}
 
+#menuF {
+    display: flex;
+    flex-direction: column; /* En pantallas pequeñas se apilan en columna */
+    align-items: center;
+    margin: 0; /* Eliminar margen de #menuF */
+    flex: 1 1 100%; /* Esto asegura que se ocupe todo el ancho en pantallas pequeñas */
+}
 
-/*Responsivo*/
+#menuF li {
+    margin: 10px 0; /* Aumenta el espacio entre los items del menú */
+}
+
+#menuF a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#lugar {
+    text-align: center;
+    font-size: 14px;
+    flex-grow: 0;
+    margin-top: 10px;
+}
+
+footer a img {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    display: block;
+    border-radius: 100%;
+}
+
+/* Responsivo para pantallas pequeñas */
 @media (max-width: 600px) {
-    body {padding: 10px;}
-    header h1 {font-size: 1.8em;}
-    nav ul {flex-direction: column; }
-
-    nav ul li {margin: 10px 0;}
-
-    section {
-        margin: 10px 0;
-        padding: 15px;
+    footer {
+        flex-direction: column; /* Hace que los elementos se apilen verticalmente en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
     }
 
-    button {
-        width: 100%; /* El botón ocupa todo el ancho en pantallas pequeñas */
-        padding: 12px;
+    #menuF {
+        flex-direction: row; /* En pantallas móviles, los items del menú estarán en fila */
+        justify-content: center;
     }
 
-    input, select {
-        width: 100%; /* Inputs y select también ocupan el ancho completo */
+    #lugar {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    footer a img {
+        width: 150px; /* Hace más pequeño el logo en pantallas móviles */
     }
 }
 
-/* Estilo para pantallas medianas (tabletas y dispositivos con pantallas más grandes) */
+/* Estilo para pantallas medianas (tabletas) */
 @media (max-width: 900px) {
-    header h1 {font-size: 2.2em; }
-
-    nav ul {
-        flex-direction: row; 
-        justify-content: space-around;
+    footer {
+        flex-direction: column;
     }
 
-    section {margin: 15px;}
-
-    button {padding: 10px;}
-
-    input, select {width: 100%;}
-}
-
-/* Estilo para pantallas grandes (de escritorio y más grandes) */
-@media (min-width: 901px) {
-    body {padding: 20px;}
-
-    header h1 {font-size: 2.5em; }
-
-    nav ul {justify-content: center; }
-
-    section {
-        margin: 20px;
-        padding: 25px;
+    #menuF {
+        flex-direction: row; /* Para pantallas medianas también lo dejamos en fila */
+        justify-content: space-between;
+        margin-top: 10px;
     }
 
-    button {padding: 15px;}
-
-    input, select {width: auto;}
+    footer a img {
+        width: 180px; /* Ajusta el tamaño del logo para pantallas medianas */
+    }
 }

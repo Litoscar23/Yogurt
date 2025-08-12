@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <h1>Calculadora Plan Maestro de Producción de Yogurt</h1>
+        <h1>Calculadora productora de yogurt frutado</h1>
     </header>
     <nav>
         <ul id="menu">
@@ -19,49 +19,57 @@
     </nav>
     <main>
         <section id="Saludo">
-            <H2 id="pmp">Plan maestro de producción de yogurt</H2>
-            <h3>Bienvenido en esta web usted podrá ver lo siguiente:</h3>
-                <ul>
-                    <h3>Planificación diaria/semanal del yogurt</h3>
-                    <h3>La demanda proyectada</h3>
-                    <h3>Calendario de producción</h3>
-                    <h3>Fecha de caducidad del yogurt</h3>
-                </ul>
+            <h2 id="pmp">Bienvenido en esta web usted podrá ver lo siguiente:</h2>
+            <ul>
+                <li>La cantidad de insumos para la elaboración del yogurt</li>
+                <li>La cantidad de recipientes que obtendrá</li>
+                <li>Calendario de producción</li>
+            </ul>
         </section>
         <section id="Entrada">
-            <h3>Pasos a realizar</h3>
-                <ul>
-                    <label>Ingrese los litros de leche que tiene:</label>
-                    <input><br>
-
-                    <label for="sabor">Sabor del yogurt:</label>
-                    <select id="sabor" name="sabor" required>
-                        <option value="Fresa">Fresa</option>
-                        <option value="Durazno">Durazno</option>
-                        <option value="Fruta3">Agragar sabores</option>
-                    </select><br>
-                    <label>Ingrese cantidad de cultivo:</label>
-                    <input><br>
-
-                    <label>Seleccione la fecha en la cual comenzará la producción</label>
+            <h2>Pasos a realizar</h2>
+            <ul>
+                <li>
+                    <label for="recipiente">Elegir recipiente:</label>
+                    <select id="recipiente" name="recipiente" required>
+                        <option value="" disabled selected>Selecciona un recipiente</option> 
+                        <option value="vasos">Vasos (120g)</option>
+                        <option value="Botella">Botella (1Kg)</option>
+                    </select>
+                </li>
+                <li>
+                    <label>Ingrese la cantidad de recipientes que desea: </label>
+                    <input type="number" name="cantidad" required>
+                </li>
+                <li>
                     <label for="fechaInicio">Fecha de inicio (DD-MM-AAAA):</label>
-                    <input type="date" id="fechaInicio" name="fechaInicio" required><br>
-
+                    <input type="date" id="fechaInicio" name="fechaInicio" required>
+                </li>
+                <li>
                     <label>Presione el botón para calcular:</label>
-                        <button id="calcular"> CALCULAR </button>
-                </ul>
+                    <button id="calcular"> CALCULAR </button>
+                </li>
+            </ul>
         </section>
         <section id="Salida">
-            <H1>Salida de datos</H1>
-            <label for=""></label>
-
-            <label for=""></label>
-            
-            <label for=""></label>
+            <h2>Salida de datos</h2>
         </section>
     </main>
-    </body>
-<footer>Footer</footer>
-</html>
-<script src="js/script.js"><script/>
 
+    <footer>
+        <div>
+            <ul id="menuF">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="info.html">¿Quiénes somos?</a></li>
+            </ul>
+        </div>
+        <div id="lugar">
+            <h3>Tarma - Junín - Perú</h3>
+            <h3> -- /08/2025 </h3>
+        </div>
+        <a href="https://admision.unaat.edu.pe/">
+            <img src="img/logooo.jpg" alt="UNATA">
+        </a>
+    </footer>
+</body>
+</html>
