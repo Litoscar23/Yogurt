@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMP Yogurt</title>
+    <title>Yogur Planner</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilosqs.css">
 
     <!-- Manifest para PWA -->
     <link rel="manifest" href="manifest.json">
@@ -16,7 +17,7 @@
 
 <body>
     <header>
-        <h1>Calculadora productora de yogurt frutado</h1>
+        <h1>Calculadora de producción de yogurt</h1>
     </header>
     <nav>
         <ul id="menu">
@@ -24,42 +25,38 @@
             <li><a href="info.html">¿Quiénes somos?</a></li>
         </ul>
     </nav>
+
     <main>
-        <section id="Saludo">
-            <h2 id="pmp">Bienvenido en esta web usted podrá ver lo siguiente:</h2>
-            <ul>
-                <li>La cantidad de insumos para la elaboración del yogurt</li>
-                <li>La cantidad de recipientes que obtendrá</li>
-                <li>Calendario de producción</li>
-            </ul>
+        <section id="seccion1">
+            <article>
+                <p>
+                    Somos un grupo de estudiantes de la Universidad Nacional Altoandina de Tarma, interesados en la gestión y el buen manejo de recursos.
+                </p>
+            </article>
         </section>
-        <section id="Entrada">
-            <h2>Pasos a realizar</h2>
-            <ul>
-                <li>
-                    <label for="recipiente">Elegir recipiente:</label>
-                    <select id="recipiente" name="recipiente" required>
-                        <option value="" disabled selected>Selecciona un recipiente</option> 
-                        <option value="vasos">Vasos (120g)</option>
-                        <option value="Botella">Botella (1Kg)</option>
-                    </select>
-                </li>
-                <li>
-                    <label>Ingrese la cantidad de recipientes que desea: </label>
-                    <input type="number" name="cantidad" required>
-                </li>
-                <li>
-                    <label for="fechaInicio">Fecha de inicio (DD-MM-AAAA):</label>
-                    <input type="date" id="fechaInicio" name="fechaInicio" required>
-                </li>
-                <li>
-                    <label>Presione el botón para calcular:</label>
-                    <button id="calcular"> CALCULAR </button>
-                </li>
-            </ul>
-        </section>
-        <section id="Salida">
-            <h2>Salida de datos</h2>
+
+        <section>
+            <img src="img/LOGO UNAAT.jpg" alt="UNAAT">
+            <div class="integrantes">
+                <article class="estudiantes">
+                    <figure>
+                        <img src="img/darwin.jpg" alt="Estudiante 1">
+                        <figcaption> Cordova Cajamalqui Juan Darwin </figcaption>
+                    </figure>
+                </article>
+                <article class="estudiantes">
+                    <figure>
+                        <img src="img/mibo.jpg" alt="Estudiante 2">
+                        <figcaption> Nieto Apolinario Arthur Pool </figcaption>
+                    </figure>
+                </article>
+                <article class="estudiantes">
+                    <figure>
+                        <img src="img/Yareck.jpg" alt="Estudiante 3">
+                        <figcaption> Rosales Dias Yareck Jesus </figcaption>
+                    </figure>
+                </article>
+            </div>
         </section>
     </main>
 
