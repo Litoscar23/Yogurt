@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMP Yogurt</title>
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Manifest para PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f08080">
+
+    <!-- iOS soporte -->
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
 
 <body>
@@ -71,5 +78,14 @@
             <img src="img/logooo.jpg" alt="UNATA">
         </a>
     </footer>
+
+    <!-- Registro del Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js")
+            .then(() => console.log("Service Worker registrado correctamente."))
+            .catch(err => console.log("Error al registrar Service Worker:", err));
+        }
+    </script>
 </body>
 </html>
